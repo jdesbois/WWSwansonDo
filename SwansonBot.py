@@ -17,7 +17,6 @@ async def on_ready():
 async def wwsd(ctx):
     response = requests.get("http://ron-swanson-quotes.herokuapp.com/v2/quotes")
     quote = response.json()[0]
-    print(quote)
     await ctx.send(quote)
 
 
@@ -25,7 +24,6 @@ async def wwsd(ctx):
 async def wwsdsearch(ctx, arg):
     response = requests.get("http://ron-swanson-quotes.herokuapp.com/v2/quotes/search/" + arg)
     quote = response.json()[0]
-    print(quote)
     await ctx.send(quote)
 
 
